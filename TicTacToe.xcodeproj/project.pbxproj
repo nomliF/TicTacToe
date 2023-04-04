@@ -61,9 +61,9 @@
 				F860DC4B29D198D500FF9E8D /* TictacToeModel.swift */,
 				F860DC3D29D197DD00FF9E8D /* ContentView.swift */,
 				F860DC4929D1989100FF9E8D /* TicTacToeView.swift */,
+				F860DC4F29D1ABA900FF9E8D /* WelcomeView.swift */,
 				F860DC3F29D197DD00FF9E8D /* Assets.xcassets */,
 				F860DC4129D197DD00FF9E8D /* Preview Content */,
-				F860DC4F29D1ABA900FF9E8D /* WelcomeView.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
