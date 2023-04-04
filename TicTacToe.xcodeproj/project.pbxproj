@@ -14,6 +14,7 @@
 		F860DC4A29D1989100FF9E8D /* TicTacToeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F860DC4929D1989100FF9E8D /* TicTacToeView.swift */; };
 		F860DC4C29D198D500FF9E8D /* TictacToeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F860DC4B29D198D500FF9E8D /* TictacToeModel.swift */; };
 		F860DC5029D1ABA900FF9E8D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F860DC4F29D1ABA900FF9E8D /* WelcomeView.swift */; };
+		F882921429DC7C3B00780789 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882921329DC7C3B00780789 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		F860DC4929D1989100FF9E8D /* TicTacToeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeView.swift; sourceTree = "<group>"; };
 		F860DC4B29D198D500FF9E8D /* TictacToeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TictacToeModel.swift; sourceTree = "<group>"; };
 		F860DC4F29D1ABA900FF9E8D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F882921329DC7C3B00780789 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				F860DC3D29D197DD00FF9E8D /* ContentView.swift */,
 				F860DC4929D1989100FF9E8D /* TicTacToeView.swift */,
 				F860DC4F29D1ABA900FF9E8D /* WelcomeView.swift */,
+				F882921329DC7C3B00780789 /* Extension.swift */,
 				F860DC3F29D197DD00FF9E8D /* Assets.xcassets */,
 				F860DC4129D197DD00FF9E8D /* Preview Content */,
 			);
@@ -149,6 +152,7 @@
 				F860DC5029D1ABA900FF9E8D /* WelcomeView.swift in Sources */,
 				F860DC4C29D198D500FF9E8D /* TictacToeModel.swift in Sources */,
 				F860DC4A29D1989100FF9E8D /* TicTacToeView.swift in Sources */,
+				F882921429DC7C3B00780789 /* Extension.swift in Sources */,
 				F860DC3E29D197DD00FF9E8D /* ContentView.swift in Sources */,
 				F860DC3C29D197DD00FF9E8D /* TicTacToeApp.swift in Sources */,
 			);

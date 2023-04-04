@@ -11,23 +11,29 @@ struct WelcomeView: View {
     @Binding var isPresented: Bool
     
     var body: some View {
-        VStack {
-            Text("Welcome to Tic Tac Toe!")
-                .font(.title)
-                .padding()
-            
-            Button(action: {
-                isPresented = false
-            }) {
-                Text("Start Game")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
+        ZStack{
+            Color.skyGradient
+                .ignoresSafeArea()
+            VStack {
+                Text("Welcome to Tic Tac Toe!")
+                    .font(.title)
                     .padding()
-                    .background(Color.green)
-                    .cornerRadius(10)
-            }
-            .padding()
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
+                Button(action: {
+                    isPresented = false
+                }) {
+                    Text("Start Game")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                .padding()
+            }.cornerRadius(10)
         }
     }
 }

@@ -16,58 +16,67 @@ struct ContentView: View {
         if isWelcomePresented {
             WelcomeView(isPresented: $isWelcomePresented)
         } else {
-            VStack {
-                Text("Tic Tac Toe")
-                    .font(.title)
-                    .padding()
-                
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 15), count: 3), spacing: 15) {
-                    ForEach(game.board.indices) { i in
-                        TicTacToeView(value: game.board[i])
-                            .onTapGesture {
-                                game.makeMove(at: i)
-                            }
-                    }
-                }
-                .padding()
-                
-                HStack {
-                    Button(action: {
-                        game.reset()
-                    }) {
-                        Text("Reset Game")
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.green)
-                            .cornerRadius(10)
+            ZStack {
+                Color.skyGradient
+                    .ignoresSafeArea()
+                VStack {
+                    Text("Tic Tac Toe")
+                        .font(.title)
+                        .padding()
+                    
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 15), count: 3), spacing: 15) {
+                        ForEach(game.board.indices) { i in
+                            TicTacToeView(value: game.board[i])
+                                .onTapGesture {
+                                    game.makeMove(at: i)
+                                }
+                        }
                     }
                     .padding()
                     
-                    Button(action: {
-                        isGameOver = true
-                    }) {
-                        Text("Quit Game")
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
+                    if let winner = game.winner {
+                        Text("\(winner) Wins!")
+                            .font(.title)
                             .padding()
-                            .background(Color.red)
-                            .cornerRadius(10)
+                    } else if game.isDraw {
+                        Text("Draw")
+                            .font(.title)
+                            .padding()
                     }
-                    .padding()
-                }
-                
-                if let winner = game.winner {
-                    Text("\(winner) Wins!")
-                        .font(.title)
+                    HStack {
+                        Button(action: {
+                            game.reset()
+                        }) {
+                            Text("Reset Game")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.green)
+                                .cornerRadius(10)
+                        }
                         .padding()
-                } else if game.isDraw {
-                    Text("Draw")
-                        .font(.title)
+                        
+                        Button(action: {
+                            isGameOver = true
+                        }) {
+                            Text("Quit Game")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.red)
+                                .cornerRadius(10)
+                        }
                         .padding()
+                    }
                 }
+            }
+            .alert(isPresented: $isGameOver) {
+                Alert(title: Text("Quit Game"), message: Text("Are you sure you want to quit?"), primaryButton: .cancel(), secondaryButton: .destructive(Text("Quit"), action: {
+                    isWelcomePresented = true
+                    game.reset()
+                }))
             }
         }
     }
@@ -78,3 +87,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
