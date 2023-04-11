@@ -13,7 +13,8 @@ struct WelcomeView: View {
     var body: some View {
         ZStack{
             Color.skyGradient
-                .ignoresSafeArea()
+                .ignoresSafeArea()// Ignore the safe area to make the gradient full screen
+
             VStack {
                 Text("Welcome to Tic Tac Toe!")
                     .font(.title)
@@ -22,7 +23,7 @@ struct WelcomeView: View {
                     .fontWeight(.bold)
                 
                 Button(action: {
-                    isPresented = false
+                    isPresented = false //dismissing the welcome view
                 }) {
                     Text("Start Game")
                         .font(.title2)
