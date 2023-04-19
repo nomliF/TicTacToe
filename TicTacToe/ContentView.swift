@@ -31,6 +31,7 @@ struct ContentView: View {
                                     game.makeMove(at: i)
                                 }
                         }
+                        .disabled(game.isOver)
                     }
                     .padding()
                     
@@ -47,7 +48,7 @@ struct ContentView: View {
                         Button(action: {
                             game.reset()
                         }) {
-                            Text("Reset Game")
+                            Text("Play Again")
                                 .font(.title2)
                                 .fontWeight(.semibold)
                                 .foregroundColor(.white)
