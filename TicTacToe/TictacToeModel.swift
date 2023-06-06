@@ -12,11 +12,11 @@ class TicTacToeModel: ObservableObject {
     @Published var currentPlayer = "X" //current player, initially set to X
     @Published var isOver = false
 
-    var isDraw: Bool { //checks if the game is a draw
+    var isDraw: Bool {
         !board.contains("") //game is a draw if there are no empty cells left
     }
     
-    var winner: String? { //checks if there's a winner
+    var winner: String?{
         checkWinner()
     }
     
@@ -34,15 +34,15 @@ class TicTacToeModel: ObservableObject {
         isOver = false
     }
     
-    func quit() { //quit the game
-        exit(0) // Exit the game
+    func quit() { 
+        exit(0)
     }
     
     private func checkWinner() -> String? { // Private method to check for winning pattern
         let winningPatterns = [ // Array of winning patterns            
-            [0, 1, 2], [3, 4, 5], [6, 7, 8], // horizontal
-            [0, 3, 6], [1, 4, 7], [2, 5, 8], // vertical
-            [0, 4, 8], [2, 4, 6] // diagonal
+            [0, 1, 2], [3, 4, 5], [6, 7, 8], 
+            [0, 3, 6], [1, 4, 7], [2, 5, 8], 
+            [0, 4, 8], [2, 4, 6]
         ]
         
         for pattern in winningPatterns { // Loop through the winning patterns
@@ -52,6 +52,6 @@ class TicTacToeModel: ObservableObject {
             }
         }
         
-        return nil // Return nil if there's no winner
+        return nil 
     }
 }

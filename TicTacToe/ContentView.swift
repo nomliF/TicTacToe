@@ -74,7 +74,8 @@ struct ContentView: View {
                 }
             }
             .alert(isPresented: $isGameOver) {
-                Alert(title: Text("Quit Game"), message: Text("Are you sure you want to quit?"), primaryButton: .cancel(), secondaryButton: .destructive(Text("Quit"), action: {
+                Alert(title: Text("Quit Game"), message: Text("Are you sure you want to quit?"), 
+                primaryButton: .cancel(), secondaryButton: .destructive(Text("Quit"), action: {
                     isWelcomePresented = true
                     game.reset()
                 }))
