@@ -16,7 +16,7 @@ struct WelcomeView: View {
     var body: some View {
         ZStack{
             Color.skyGradient
-                .ignoresSafeArea()// Ignore the safe area to make the gradient full screen
+                .ignoresSafeArea()//Ignore the safe area to make the gradient full screen
 
             VStack {
                 Text("Welcome to Tic Tac Toe!")
