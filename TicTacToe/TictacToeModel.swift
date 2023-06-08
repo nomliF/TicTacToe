@@ -34,10 +34,6 @@ class TicTacToeModel: ObservableObject {
         isOver = false
     }
     
-    func quit() { 
-        exit(0)
-    }
-    
     private func checkWinner() -> String? { //Private method to check for winning pattern
         let winningPatterns = [ //Array of winning patterns            
             [0, 1, 2], [3, 4, 5], [6, 7, 8], 
